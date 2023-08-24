@@ -105,10 +105,11 @@ CREATE TABLE VenueBookings (
     User_id INT,
     Venue_id INT,
     Total_amount DECIMAL(10,2),
-    [Start_date] Date,
-    End_date Date,
+    Start_date DATE,
+    End_date DATE,
     FOREIGN KEY (User_id) REFERENCES Users(User_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (Venue_id) REFERENCES Venues(Venue_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (Venue_id) REFERENCES Venues(Venue_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE KEY (User_id, Venue_id)
 );
 
 -- how to insert Toatal amount in table

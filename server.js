@@ -4,6 +4,7 @@ const routerUser = require("./router/user")
 const routerVenue = require("./router/venue")
 const routerAdmin = require("./router/admin")
 const routerServices = require("./router/services")
+const routerBooking = require("./router/booking")
 const app = express()
 
 
@@ -16,6 +17,8 @@ app.use("/user", routerUser)
 app.use("/admin",routerAdmin)
 app.use("/venue", routerVenue)
 app.use("/service",routerServices)
+app.use("/booking",routerBooking)
+
 
 
 
