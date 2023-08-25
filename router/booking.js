@@ -27,6 +27,25 @@ router.get("/:id", (request, response) => {
      })
 })
 
+router.get("/venuebookings/All", (request, response) => {
+     const statement = `
+    SELECT
+      VB.VenueBooking_id,
+      U.User_name,
+      V.Venue_name,
+      VB.Total_amount,
+      VB.Start_date,
+      VB.End_date
+    FROM
+      VenueBookings VB
+      INNER JOIN Users U ON VB.User_id = U.User_id
+      INNER JOIN Venues V ON VB.Venue_id = V.Venue_id`;
+
+     db.query(statement, (error, result) => {
+          response.send(utils.createResult(error, result));
+     });
+});
+
 
 
 // router.get("/:id", (request, response) => {
