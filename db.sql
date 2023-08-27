@@ -41,11 +41,11 @@ CREATE TABLE Venues (
 );
 
 insert into Venues (Venue_name , Venue_description , Venue_contact , Venue_address , Venue_amountPerDay , Venue_image) values 
-("Taj Hotel", "The Taj Mahal Palace is a heritage, five-star, luxury hotel in the Colaba area of mumbai", "987654321", "pune", 4000, "3D Destination.jpeg"),
-("King Hotel", "King Hotel is a 3-star property located in Palmerston", "987654321", "pune", 5000, "Dutch Palace.jpeg"),
-("Radision","Radisson Blu is an international chain of upscale hotels", "987654321", "pune", 6000, "leMeridian3.jpeg"),
-("Novotel1","Novotel is a French midscale hotel brand owned by Accor", "987654321", "pune", 9000, "Hotel_Novotel1.jpeg"),
-("Vrindavan Garden","Hotel Vrindavan Garden is a good choice for travellers looking for a 3 star hotel in pune", "985654321", "pune", 10000, "Vrindavan Garden.jpeg");
+("Taj Hotel", "The Taj Mahal Palace is a heritage, five-star, luxury hotel in the Colaba area of mumbai", "987654321", "pune", 15000, "3D Destination.jpeg"),
+("King Hotel", "King Hotel is a 3-star property located in Palmerston", "987654321", "pune", 9000, "Dutch Palace.jpeg"),
+("Radision","Radisson Blu is an international chain of upscale hotels", "987654321", "pune", 12000, "leMeridian3.jpeg"),
+("Novotel1","Novotel is a French midscale hotel brand owned by Accor", "987654321", "pune", 7000, "Hotel_Novotel1.jpeg"),
+("Vrindavan Garden","Hotel Vrindavan Garden is a good choice for travellers looking for a 3 star hotel in pune", "985654321", "pune", 95000, "Vrindavan Garden.jpeg");
 
 
 
@@ -111,6 +111,13 @@ CREATE TABLE VenueBookings (
     FOREIGN KEY (Venue_id) REFERENCES Venues(Venue_id) ON DELETE CASCADE ON UPDATE CASCADE,
     UNIQUE KEY (User_id, Venue_id)
 );
+
+INSERT INTO VenueBookings (User_id, Venue_id, Total_amount, Start_date, End_date) VALUES
+(1, 6, 25000, '2023-09-01', '2023-09-03'),
+(2, 7, 18000, '2023-09-05', '2023-09-07'),
+(3, 7, 12000, '2023-09-10', '2023-09-12'),
+(4, 9, 21000, '2023-09-15', '2023-09-17'),
+(1, 9, 15000, '2023-09-20', '2023-09-22');
 
 -- how to insert Toatal amount in table
 
