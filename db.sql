@@ -45,7 +45,7 @@ insert into Venues (Venue_name , Venue_description , Venue_contact , Venue_addre
 ("King Hotel", "King Hotel is a 3-star property located in Palmerston", "987654321", "pune", 9000, "Dutch Palace.jpeg"),
 ("Radision","Radisson Blu is an international chain of upscale hotels", "987654321", "pune", 12000, "leMeridian3.jpeg"),
 ("Novotel1","Novotel is a French midscale hotel brand owned by Accor", "987654321", "pune", 7000, "Hotel_Novotel1.jpeg"),
-("Vrindavan Garden","Hotel Vrindavan Garden is a good choice for travellers looking for a 3 star hotel in pune", "985654321", "pune", 95000, "Vrindavan Garden.jpeg");
+("Vrindavan Garden","Hotel Vrindavan Garden is a good choice for travellers looking for a 3 star hotel in pune", "985654321", "pune", 95000, "garden.jpeg");
 
 
 
